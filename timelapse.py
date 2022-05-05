@@ -108,10 +108,10 @@ def firmware_monitor(snapshot_folder, duet_host, webcam_url, webcam_http_auth, w
           timelapse_folder = None
           log_print("Print finished.")
 
-        if timelapse_folder:
-          for line in raw_lines:
-            if line.startswith(b"LAYER CHANGE"):
-                layer_changed(timelapse_folder, webcam_url, webcam_http_auth, webcam_https_verify)
+        # if timelapse_folder:
+        #   for line in raw_lines:
+        #     if line.startswith(b"LAYER CHANGE"):
+        #         layer_changed(timelapse_folder, webcam_url, webcam_http_auth, webcam_https_verify)
 
         time.sleep(1)
     except Exception as e:
